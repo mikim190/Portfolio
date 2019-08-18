@@ -38,7 +38,7 @@ class Menu extends React.Component {
           </div>
 
           <ul className={`menu-nav ${show}`}>
-            <li className={`nav-item ${show}`}>
+            <li className={`nav-item current ${show}`}>
               <a href="/" className="nav-link">
                 HOME
               </a>
