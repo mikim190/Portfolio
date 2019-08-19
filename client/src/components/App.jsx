@@ -1,29 +1,20 @@
 import React, { Component } from "react";
-import Menu from "./Menu.jsx";
+import { Link, Switch, Route } from "react-router-dom";
+import Home from "./Home.jsx";
+import About from "./About.jsx";
+import Projects from "./Projects.jsx";
+import Contact from "./Contact.jsx";
 
 class App extends React.Component {
   render() {
     return (
       <div>
-        <Menu />
-
-        <main id="home">
-          <h1 className="lg-heading">
-            Kim <span className="text-secondary">Tran</span>
-          </h1>
-          <h2 className="sm-heading">Full Stack Software Engineer</h2>
-          <div className="icons">
-            <a href="#!">
-              <i className="fab fa-linkedin fa-2x" />
-            </a>
-            <a href="#!">
-              <i className="fab fa-github fa-2x" />
-            </a>
-            <a href="#!">
-              <i className="fas fa-envelope-square fa-2x" />
-            </a>
-          </div>
-        </main>
+        <Switch>
+          <Route exact path="/client/dist/index.html" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/projects" component={Projects} />
+          <Route path="/contact" component={Contact} />
+        </Switch>
       </div>
     );
   }
