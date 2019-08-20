@@ -1,14 +1,16 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class Menu extends React.Component {
   constructor() {
     super();
 
     this.state = {
-      showMenu: false
+      showMenu: false,
+      current: ""
     };
     this.toggleMenu = this.toggleMenu.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   toggleMenu() {
@@ -17,9 +19,17 @@ class Menu extends React.Component {
     });
   }
 
+  handleClick(e) {
+    this.setState({
+      showMenu: false,
+      current: e.target.dataset.id
+    });
+  }
+
   render() {
     let menu = this.state.showMenu;
     let show = menu ? "show" : "";
+    let curr = this.state.current ? "current" : "";
 
     return (
       <header>
@@ -38,41 +48,31 @@ class Menu extends React.Component {
           </div>
 
           <ul className={`menu-nav ${show}`}>
-            <li className={`nav-item current ${show}`}>
-              {/* <a href="/" className="nav-link">
+            <li
+              onClick={e => this.handleClick(e)}
+              className={`nav-item ${curr} ${show}`}
+            >
+              <Link data-id="1" className="nav-link" to="/">
                 HOME
-              </a> */}
-              <NavLink
-                className="nav-link"
-                activeStyle={{ color: "$secondary-color" }}
-                to="/client/dist/index.html"
-              >
-                HOME
-              </NavLink>
+              </Link>
             </li>
-            <li className={`nav-item ${show}`}>
-              {/* <a href="about.html" className="nav-link">
+            <li
+              onClick={e => this.handleClick(e)}
+              className={`nav-item ${curr} ${show}`}
+            >
+              <Link data-id="2" className="nav-link" to="/about">
                 ABOUT ME
-              </a> */}
-              <NavLink className="nav-link" to="/about">
-                ABOUT ME
-              </NavLink>
+              </Link>
             </li>
             <li className={`nav-item ${show}`}>
-              {/* <a href="projects.html" className="nav-link">
+              <Link className="nav-link" to="/projects">
                 MY PROJECTS
-              </a> */}
-              <NavLink className="nav-link" to="/projects">
-                MY PROJECTS
-              </NavLink>
+              </Link>
             </li>
             <li className={`nav-item ${show}`}>
-              {/* <a href="contact.html" className="nav-link">
+              <Link className="nav-link" to="/contact">
                 CONTACT ME
-              </a> */}
-              <NavLink className="nav-link" to="/contact">
-                CONTACT ME
-              </NavLink>
+              </Link>
             </li>
           </ul>
         </nav>

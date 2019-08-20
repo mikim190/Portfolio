@@ -4,7 +4,6 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        <Menu />
         <main id="home">
           <h1 className="lg-heading">
             Kim <span className="text-secondary">Tran</span>
