@@ -1,13 +1,12 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 class Menu extends React.Component {
   constructor() {
     super();
 
     this.state = {
-      showMenu: false,
-      current: ""
+      showMenu: false
     };
     this.toggleMenu = this.toggleMenu.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -21,15 +20,13 @@ class Menu extends React.Component {
 
   handleClick(e) {
     this.setState({
-      showMenu: false,
-      current: e.target.dataset.id
+      showMenu: false
     });
   }
 
   render() {
     let menu = this.state.showMenu;
     let show = menu ? "show" : "";
-    let curr = this.state.current ? "current" : "";
 
     return (
       <header>
@@ -50,29 +47,52 @@ class Menu extends React.Component {
           <ul className={`menu-nav ${show}`}>
             <li
               onClick={e => this.handleClick(e)}
-              className={`nav-item ${curr} ${show}`}
+              className={`nav-item ${show}`}
             >
-              <Link data-id="1" className="nav-link" to="/">
+              <NavLink
+                exact
+                activeClassName="active"
+                className="nav-link"
+                to="/"
+              >
                 HOME
-              </Link>
+              </NavLink>
             </li>
             <li
               onClick={e => this.handleClick(e)}
-              className={`nav-item ${curr} ${show}`}
+              className={`nav-item ${show}`}
             >
-              <Link data-id="2" className="nav-link" to="/about">
+              <NavLink
+                activeClassName="active"
+                className="nav-link"
+                to="/about"
+              >
                 ABOUT ME
-              </Link>
+              </NavLink>
             </li>
-            <li className={`nav-item ${show}`}>
-              <Link className="nav-link" to="/projects">
+            <li
+              onClick={e => this.handleClick(e)}
+              className={`nav-item ${show}`}
+            >
+              <NavLink
+                className="nav-link"
+                activeClassName="active"
+                to="/projects"
+              >
                 MY PROJECTS
-              </Link>
+              </NavLink>
             </li>
-            <li className={`nav-item ${show}`}>
-              <Link className="nav-link" to="/contact">
+            <li
+              onClick={e => this.handleClick(e)}
+              className={`nav-item ${show}`}
+            >
+              <NavLink
+                className="nav-link"
+                activeClassName="active"
+                to="/contact"
+              >
                 CONTACT ME
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </nav>

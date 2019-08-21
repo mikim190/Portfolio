@@ -101,9 +101,9 @@
       transform: translate3d(0, 0, 0);
     }
     //Link (a) inside current (nav-item) has different color
-    &.current > .nav-link {
-      color: $secondary-color;
-    }
+    // &.is-active > .nav-link {
+    //   color: $secondary-color;
+    // }
   }
 
   .nav-link {
@@ -115,6 +115,10 @@
     color: set-text-color($primary-color);
     text-decoration: none;
     @include easeOut;
+
+    &.active {
+      color: $secondary-color;
+    }
 
     &:hover {
       color: $secondary-color;
