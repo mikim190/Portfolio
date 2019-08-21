@@ -7,13 +7,11 @@ class Projects extends React.Component {
       <div>
         <main id="projects">
           <h1 className="lg-heading">
-            About <span className="text-secondary">Me</span>
+            My <span className="text-secondary">Projects</span>
           </h1>
-          <h2 className="sm-heading">Let me tell you a few things...</h2>
+          <h2 className="sm-heading">Take a look at these projects...</h2>
           <div className="about-info">
-            <img src="" alt="Kim Tran" className="bio-image" />
             <div className="bio">
-              <h3 className="text-secondary">BIO</h3>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Officiis soluta quas aut autem sapiente nam aliquam numquam
@@ -54,7 +52,7 @@ class Projects extends React.Component {
             </div>
           </div>
         </main>
-        <footer id="main-footer">Copyright &copy; 2019</footer>
+        <div className="main-footer footer">Copyright &copy; 2019</div>
       </div>
     );
   }

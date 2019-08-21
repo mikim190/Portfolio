@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Home extends React.Component {
   render() {
     return (
-      <div>
+      <div id="bg-img">
         <main id="home">
           <h1 className="lg-heading">
             Kim <span className="text-secondary">Tran</span>
@@ -21,9 +21,9 @@ class Home extends React.Component {
             </a>
           </div>
         </main>
-        <footer>
+        <div className="main-footer">
           <cite>Photo by NASA on Unsplash</cite>
-        </footer>
+        </div>
       </div>
     );
   }
