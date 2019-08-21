@@ -166,9 +166,13 @@ main {
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-image {
     grid-area: bio-image;
-    margin: auto;
+    width: 200px;
+    height: 200px;
+    background-image: url("../img/profile.jpg");
+    background-size: cover;
     border-radius: 50%;
-    border: #eece1a 3px solid; }
+    border: solid 3px #eece1a;
+    margin: auto; }
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem; }
@@ -215,7 +219,10 @@ main {
       background-image: url("../img/profile.jpg");
       background-size: cover;
       width: 150px;
-      height: 150px; } }
+      height: 150px; }
+  .about-info {
+    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
+    grid-template-columns: 1fr; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {

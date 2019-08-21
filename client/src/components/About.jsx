@@ -10,7 +10,8 @@ class About extends React.Component {
           </h1>
           <h2 className="sm-heading">Let me tell you a few things...</h2>
           <div className="about-info">
-            <img src="" alt="Kim Tran" className="bio-image" />
+            {/* <img src="" alt="Kim Tran" className="bio-image" /> */}
+            <div className="bio-image" />
             <div className="bio">
               <h3 className="text-secondary">BIO</h3>
               <p>
