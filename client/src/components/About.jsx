@@ -8,17 +8,49 @@ class About extends React.Component {
           <h1 className="lg-heading">
             About <span className="text-secondary">Me</span>
           </h1>
-          <h2 className="sm-heading">Let me tell you a few things...</h2>
+          <h2 className="sm-heading" />
           <div className="about-info">
-            {/* <img src="" alt="Kim Tran" className="bio-image" /> */}
             <div className="bio-image" />
             <div className="bio">
-              <h3 className="text-secondary">BIO</h3>
+              <h3 className="text-secondary">Hi! My name is Kim Tran</h3>
+              <p>I'm a software engineer based in San Francisco Bay Area. </p>
+            </div>
+            <div className="job job-1">
               <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Officiis soluta quas aut autem sapiente nam aliquam numquam
-                harum placeat, blanditiis mollitia, repudiandae corporis nihil
-                quis quos laudantium modi necessitatibus. Veniam?
+                I'm highly passionate about writing code following good
+                practices and top-notch technologies. I have been involved in
+                many technological projects, in the field of business,
+                government and startup, always working on both the back-end and
+                the front-end. On the academic side I hold a Bachelor of
+                Engineering in Environmental. I consider myself a person with
+                hunger for knowledge and always looking for new ideas to improve
+                what the market has to offer.
+              </p>
+            </div>
+            <div className="job job-2">
+              <p>
+                I love to solve problems. Whether it’s finding the most elegant
+                way to write a line of code or figuring out which technologies
+                fit best into the project, I love the challenge of finding a way
+                and discovering solutions.
+              </p>
+              <p>
+                I primarily use React and JavaScript, but picking up new
+                framework or language isn't a problem. I have programming
+                experience and I'm comfortable developing on the frontend as
+                well as backend.
+              </p>
+            </div>
+            <div className="job job-3">
+              <p>
+                Here's a few technologies I've been working with:
+                <li>JavaScript (ES6+)</li>
+                <li>HTML & (S)CSS</li>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>MongoDB</li>
+                <li>MySQL/PostgreSQL</li>
               </p>
             </div>
           </div>
@@ -30,3 +62,12 @@ class About extends React.Component {
 }
 
 export default About;
+
+// re-using existing solutions
+{
+  /* <p>
+                If you're looking for someone people-driven, creative, and ready
+                to learn, please don't hesitate to contact me at
+                mykim.tran297@gmail.com{" "}
+              </p> */
+}

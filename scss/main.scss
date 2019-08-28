@@ -80,12 +80,12 @@ main {
   display: grid;
   grid-gap: 30px;
   grid-template-areas:
-    "bio-image bio bio"
+    "bioimage bio bio"
     "job1 job2 job3";
   grid-template-columns: repeat(3, 1fr);
 
   .bio-image {
-    grid-area: bio-image;
+    grid-area: bioimage;
     width: 200px;
     height: 200px;
     background-image: url("../img/profile.jpg");
@@ -100,6 +100,7 @@ main {
   }
   .job-1 {
     grid-area: job1;
+    min-height: calc(100vh - 70vh);
   }
   .job-2 {
     grid-area: job2;

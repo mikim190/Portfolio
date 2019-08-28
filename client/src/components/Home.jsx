@@ -9,6 +9,7 @@ class Home extends React.Component {
             Kim <span className="text-secondary">Tran</span>
           </h1>
           <h2 className="sm-heading">Full Stack Software Engineer</h2>
+
           <div className="icons">
             <a href="https://www.linkedin.com/in/mkimtran/">
               <i className="fab fa-linkedin fa-2x" />

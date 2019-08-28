@@ -9,25 +9,19 @@ class Projects extends React.Component {
           <h1 className="lg-heading">
             My <span className="text-secondary">Projects</span>
           </h1>
-          <h2 className="sm-heading">Take a look at these projects...</h2>
+          <h2 className="sm-heading">Check out some of my projects...</h2>
           <div className="about-info">
-            <div className="bio">
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Officiis soluta quas aut autem sapiente nam aliquam numquam
-                harum placeat, blanditiis mollitia, repudiandae corporis nihil
-                quis quos laudantium modi necessitatibus. Veniam?
-              </p>
-            </div>
-
             <div className="job job-1">
               <h3>EATNOW</h3>
               <h6>Full Stack Developer</h6>
+              <a href="https://github.com/mikim190/EatNow.git" target="_blank">
+                Github repo
+              </a>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-                vitae enim quis eum! Voluptatibus velit repudiandae laudantium
-                perspiciatis sapiente similique repellat nesciunt dolorem?
-                Voluptates nemo earum provident sed velit non.
+                <li>
+                  Technologies: React, Node, Express, PostgreSQL, Webpack,
+                  Docker, AWS EC2, NginX
+                </li>
               </p>
             </div>
             <div className="job job-2">
